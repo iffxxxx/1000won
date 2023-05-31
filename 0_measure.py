@@ -3,4 +3,9 @@
 def solution(n):
     return [i for i in range(1, n + 1) if n % i == 0]
 
+
+# def solution(n):
+#     return list(filter(lambda v: n % v == 0, [i for i in range(1, n//2+1)])) + [n]
+# 약수의 특징 상 마지막에서 두번째 원소는 마지막 원소의 2/1과 같거나 아님 작다
+
 print(solution(24))
