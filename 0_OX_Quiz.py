@@ -4,20 +4,16 @@
 def solution(quiz):
     answer = []
     for n in quiz:
-        for i, v in enumerate(n.split(" = ")):
-            if eval(v) == (int(n.split(" = ")[i + 1])):
-                answer.append("O")
-                break
-            else:
-                answer.append("X")
-                break
+        a,b = n.split("=")
+        if eval(a) == int(b):
+            answer.append("O")
+        else:
+            answer.append("X")
     return answer
-
 
 # def valid(equation):
 #     equation = equation.replace('=', '==')
 #     return eval(equation)
-
 # def solution(equations):
 #     return ["O" if valid(equation) else "X" for equation in equations]    
 
